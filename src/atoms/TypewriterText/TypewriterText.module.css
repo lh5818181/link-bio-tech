@@ -1,0 +1,27 @@
+.wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.text {
+  font-family: var(--font-mono);
+  color: var(--color-primary);
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--color-primary);
+  box-shadow: var(--glow-primary);
+  animation: blink 1s step-end infinite;
+  border-radius: 1px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
