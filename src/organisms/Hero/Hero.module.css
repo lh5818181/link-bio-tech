@@ -1,0 +1,69 @@
+.hero {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-5);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.avatarWrap {
+  flex-shrink: 0;
+  padding-top: 4px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 5vw, 1.7rem);
+  font-weight: 900;
+  color: var(--color-text);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.role {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.85rem;
+  min-height: 1.4em;
+}
+
+.prompt {
+  font-family: var(--font-mono);
+  color: var(--color-secondary);
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.bio {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  max-width: 340px;
+}
+
+@media (max-width: 420px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .role {
+    justify-content: center;
+  }
+
+  .bio {
+    max-width: 100%;
+  }
+}
