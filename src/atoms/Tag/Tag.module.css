@@ -1,0 +1,36 @@
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  cursor: default;
+  transition: box-shadow 0.2s;
+}
+
+.default {
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  color: var(--color-secondary);
+}
+
+.default:hover {
+  box-shadow: var(--glow-secondary);
+}
+
+.primary {
+  background: rgba(0, 255, 148, 0.08);
+  border: 1px solid rgba(0, 255, 148, 0.2);
+  color: var(--color-primary);
+}
+
+.primary:hover {
+  box-shadow: var(--glow-primary);
+}
+
+.accent {
+  background: rgba(255, 60, 172, 0.08);
+  border: 1px solid rgba(255, 60, 172, 0.2);
+  color: var(--color-accent);
+}
