@@ -10,7 +10,7 @@ export const CONFIG = {
   location: 'Recife · PE',
   email: 'lh5818181@gmail.com',
   phone: '+55 81 9 9942-9143',
-  avatar: '/avatar.jpeg',
+  avatar: 'https://raw.githubusercontent.com/lh5818181/repo-remoto/refs/heads/main/WhatsApp%20Image%202026-04-21%20at%2021.33.52.jpeg',
 }
 
 export const LINKS = {
