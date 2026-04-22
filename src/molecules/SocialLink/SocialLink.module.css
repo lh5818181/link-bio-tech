@@ -1,0 +1,114 @@
+.link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+}
+
+.link:hover {
+  background: var(--color-surface-2);
+}
+
+.primary:hover {
+  border-color: rgba(0, 255, 148, 0.4);
+  box-shadow: var(--glow-primary), inset 0 0 20px rgba(0, 255, 148, 0.03);
+}
+
+.secondary:hover {
+  border-color: rgba(0, 212, 255, 0.4);
+  box-shadow: var(--glow-secondary), inset 0 0 20px rgba(0, 212, 255, 0.03);
+}
+
+.accent:hover {
+  border-color: rgba(255, 60, 172, 0.4);
+  box-shadow: var(--glow-accent), inset 0 0 20px rgba(255, 60, 172, 0.03);
+}
+
+.iconWrap {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon {
+  font-size: 1.3rem;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconGlow {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 255, 148, 0.08);
+  border: 1px solid rgba(0, 255, 148, 0.15);
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  letter-spacing: 0.02em;
+}
+
+.username {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.04em;
+}
+
+.arrow {
+  color: var(--color-text-dim);
+  display: flex;
+  align-items: center;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.link:hover .arrow {
+  color: var(--color-primary);
+  transform: translateX(2px);
+}
+
+.scanline {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255,255,255, 0.008) 2px,
+    rgba(255,255,255, 0.008) 3px
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.link:hover .scanline {
+  opacity: 1;
+}
